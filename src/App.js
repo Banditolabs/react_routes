@@ -7,14 +7,18 @@ import About from './pages/About'
 import Stock from './pages/Stock'
 import Dashboard from './pages/Dashboard'
 import Nav from './components/Nav'
+import { useState, useEffect } from "react";
+
+
 
 // begin the component 'App' - A function which returns JSX
 function App() {
+  
   return (
     <div className="App">
       <Nav />
       <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/' element={<Dashboard />} />
       <Route path='/about' element={<About />} />
       <Route path='/stocks/:symbol' element={<Stock />} />
       <Route path='/stocks' element={<Dashboard/>} />
