@@ -1,11 +1,11 @@
 
-export default function TableRow ({name, price, change}) {
+export default function TableRow ({name, price, change,symbol}) {
     
     return (
         <tr>
-            <td>{name}</td>
+            <td> <a href={`/stocks/${symbol}`}>{name}</a></td>
             <td>{price}</td>
             <td>{change}</td>
         </tr>
     )
-}
+    }
